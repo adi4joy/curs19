@@ -1,11 +1,9 @@
 package ro.fasttrackit.curs19;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 
-import static java.util.Comparator.comparingInt;
-import static java.util.Comparator.reverseOrder;
+import static java.util.Comparator.*;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 
@@ -54,7 +52,7 @@ public class MainStream {
                 .collect(toList()));
 
         System.out.println(names.stream()
-                .sorted(Comparator.comparing(s -> s.charAt(s.length() - 1)))
+                .sorted(comparing(s -> s.charAt(s.length() - 1)))
                 .collect(toList()));
     }
 
